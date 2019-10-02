@@ -56,8 +56,8 @@ public class Main {
                 bodyStr=Util.replaceBlank(bodyStr).trim().toLowerCase();
 
                 String ast = ASTtoDOT.astFormalParser(m);
-                //"name","doc","body","entities:(hashcode, type),...:relations:(hashcode1->hashcode2)..."
-                String ret = "\""+nameStr+"\",\""+docStr+"\",\""+bodyStr+"\",\""+ast+"\"\n";
+                //name|||doc|||body|||entities:(hashcode, type),...:relations:(hashcode1->hashcode2)..."
+                String ret = nameStr+"|||"+docStr+"|||"+bodyStr+"|||"+ast+"\"\n";
                 Util.writeFile(outputPath , ret);
             }
             else
